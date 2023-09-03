@@ -1,0 +1,55 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-weight: 400; */
+  /* 
+#194AF0
+#5E9A9F
+#312D4A
+ */
+ /* 
+#194AF0
+#484554
+#ADA9BB
+ */
+ /* 
+#194AF0
+#AEA4DB
+#1C1A27
+#312D4A
+ */
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: rgb(26, 27, 43);
+}
+a:hover {
+}
+
+body {
+}
+
+h1 {
+}
+
+button {
+}
+button:hover {
+}
+button:focus,
+button:focus-visible {
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  }
+  a:hover {
+  }
+  button {
+  }
+}
