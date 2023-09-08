@@ -8,6 +8,7 @@ import Top3SelectionPage from "./pages/Top3SelectionPage";
 import Top3Page from "./pages/Top3Page";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import Populer from "./pages/Populer";
 
 
 
@@ -25,6 +26,7 @@ function App() {
         {/* </Route> */}
         <Route path="/top-three" element={<Top3SelectionPage/>} />
         <Route path="/top-three/:category" element={<Top3Page category/>} />
+        <Route path="/populer" element={<Populer/>} />
       </Routes>
       </div>
   );

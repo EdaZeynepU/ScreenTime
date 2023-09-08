@@ -7,20 +7,20 @@ import { BrowserRouter } from "react-router-dom";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#764A4E",
+      main: "#7F1111",
     },
     secondary: {
-      main: "#BEBEBE",
+      main: "#24314A",
     },
     third: {
-      main: "#EB5852",
-      dark: "#C93939",
-      ligth: "#FF756C",
+      main: "#ECE2D4",
+      dark: "#d1c7b8",
+      ligth: "#f7f0e6",
     },
     accent: {
       main: "#B0BCC8",
-      dark: "#9DA2B5",
-      light: "#CAD5DA",
+      dark: "#d1c7b8",
+      light: "#f7f0e6",
     },
   },
 });

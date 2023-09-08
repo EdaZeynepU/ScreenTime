@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Redo, Undo } from "@mui/icons-material";
 
 // eslint-disable-next-line react/prop-types
-function ScreenWheel({ category, callbackIndex }) {
+function ScreenWheel({ category, callbackIndex, currentShow }) {
   const [Images, setimportedImages] = useState({});
   const [transformDeg, setTransformDeg] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -25,8 +25,6 @@ function ScreenWheel({ category, callbackIndex }) {
     setimportedImages(importedImages);
   };
 
-  console.log(Images);
-
   return isLoaded ? (
     <Box style={{ position: "absolute", bottom: 0, width: "100vw" }}>
       <h3
@@ -39,12 +37,11 @@ function ScreenWheel({ category, callbackIndex }) {
           color: "white",
         }}
       >
-        ShowName
+        {currentShow}
       </h3>
       <Box
         sx={{
           display: "flex",
-          //   flexDirection: "column",
           justifyContent: "space-around",
           overflow: "hidden",
         }}

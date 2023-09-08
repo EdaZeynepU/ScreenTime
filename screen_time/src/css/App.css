@@ -1,48 +1,65 @@
-#root {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center; */
+:root {
+  --mui-primary-main: #7F1111;
+  --mui-secondary-main: #24314A;
+  --mui-third-main: #ECE2D4;
+  --mui-accent-main: #B0BCC8;
 }
 
-
 .info-top3-page{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   width: 250px;
   height: 90px;
   box-shadow: 2px 2px 10px rgb(59, 59, 59);
+  /* box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7); */
   border-radius: 20px;
 }
 
 .info-top3-page:hover{
   animation: animatename 2s ease-in-out forwards;
-
 }
 
 .navbar{
-  height: 50px;
-  width: 55vw !important;
-  min-width: 400px;
+  height: 90px;
+  width: 85vw !important;
+  min-width: 700px;
+  max-width: 1300px;
   align-items: stretch;
   border-radius:0 0 15px 15px ;
   left:50% !important;
   transform:translate(-50%);
+  transition-property: margin-top;
+  transition-duration: 2s;
 }
 .css-10ltm04-MuiToolbar-root{
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.navbar a{
+.navbar .NavElement{
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 15px 30px;
+  margin: 10px;
   transition-duration: 700ms;
   border-radius: 5px;
-  width: 20%;
+  width: max-content;
   text-align: center;
+  color: rgb(204, 204, 204);
+  font-weight: 700;
 }
 
-.navbar a:hover{
-  background-color: rgb(221, 221, 221);
+.navbar .NavElement:hover{
+  background-color: rgba(221, 221, 221, 0.85);
+  /* background-color: rgba(255, 255, 255, 0.452); */
+  color: black;
+}
+
+.NavElementBtn{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px ;
+  width: 90px;
+  background:rgba(255, 255, 255, 0.7);width:80px;height:50px;
 }
 
 .top3-category-element{
@@ -52,7 +69,19 @@
   justify-content: space-evenly;
   padding: 70px 0;
   align-items: center;
+  transition-duration: 2s;
   /* background: linear-gradient(-45deg,rgb(133, 245, 217),rgb(153, 153, 223));*/
+}
+
+.top3-category-element button{
+  font-weight: 700;
+  /* font-size: medium; */
+  border: 2px solid;
+  transition-duration: 2s;
+}
+.top3-category-element:hover button{
+  color: #ffffff;
+  transition-duration: 2s;
 }
 
 .top3-category-element:hover{
@@ -68,6 +97,36 @@
 .top3page-wrapper{
   background:url("../images/comedy_series_3.png");
   transition-duration: 5s;
+}
+
+.css-1arbm61{/*for center the images at the carousel*/
+  justify-content: center;
+  display: flex;
+}
+
+.header1{
+  margin: 30px 15%;
+  font-size: 2.5rem;
+}
+.header1:nth-of-type(2n){
+  text-align: end;
+}
+
+.populer-page{
+  margin: 120px 40px 50px;
+    background-color: var(--mui-third-main);
+    box-shadow: 0px 0px 20px 50px var(--mui-third-main);
+}
+
+#scroll-dialog-title{
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--mui-primary-main);
+
+}
+
+.dialog-p{
+  margin-bottom: 15px;
 }
 
 @keyframes animatename{

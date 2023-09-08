@@ -5,19 +5,22 @@ import { Box } from "@mui/material";
 import { useParams } from "react-router-dom";
 import ScreenWheel from "../components/ScreenWheel";
 import PlaceHolder from "../images/placeholder_top3.png";
+import  Top3Shows from "../assets/ScreenDatas";
+
+
 function Top3Page() {
   const [currentIndex, setcurrentIndex] = useState(0);
   const [BgImages, setimportedImages] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
+  const [top3CurrentList, setTop3CurrentList] = useState({})
   const importedImages = {};
   const params=useParams();
-  console.log(params.category);
 
   useEffect(() => {
     importImages().then(()=>{
       setIsLoaded(true)});
+      setTop3CurrentList(Top3Shows[params.category]);
   }, []);
-
 
   const importImages = async () => {
     setTimeout(() => {
@@ -31,12 +34,11 @@ function Top3Page() {
     }
     setimportedImages(importedImages);
   };
-  console.log(BgImages);
 
   const setIndex = (value) => {
     setcurrentIndex((prev) => (3+prev + value) % 3);
-    console.log(currentIndex);
   };
+
   console.log(currentIndex);
   return (
     <div
@@ -52,8 +54,6 @@ function Top3Page() {
     >
       <div
         style={{
-          // background: `linear-gradient(0deg, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.4) 100%)`,
-          // background: `linear-gradient(0deg, rgba(230, 230, 230, 1) 10%, rgba(230, 230, 230, 0.95) 30%, rgba(255, 255, 255, 0.1) 100%)`,
           width: "100%",
           height: "100vh",
         }}
@@ -66,7 +66,7 @@ function Top3Page() {
           }}
         >
         </Box>
-        <ScreenWheel category={params.category} callbackIndex={setIndex} />
+        <ScreenWheel category={params.category} callbackIndex={setIndex} currentShow={top3CurrentList[currentIndex]} />
       </div>
     </div>
   );
