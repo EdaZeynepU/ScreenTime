@@ -35,8 +35,8 @@ function Navbar() {
             <NavLink className="NavElement" to="populer">
               Popular
             </NavLink>
-            <NavLink className="NavElement" to="top-three">
-              More
+            <NavLink className="NavElement" to="watch-list">
+            Watch List
             </NavLink>
             <IconButton
               sx={{ marginLeft: "30px" }}

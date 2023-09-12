@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {getTopRated} from "../api/ApiFetching";
+import {getTopRated} from "../data/ApiFetching";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CarouselItem from "../components/CarouselItem";

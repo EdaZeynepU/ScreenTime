@@ -14,9 +14,6 @@
   border-radius: 20px;
 }
 
-.info-top3-page:hover{
-  animation: animatename 2s ease-in-out forwards;
-}
 
 .navbar{
   height: 90px;
@@ -127,6 +124,12 @@
 
 .dialog-p{
   margin-bottom: 15px;
+}
+
+.fav-item-side{
+  height: 420px;
+  width: 280px;
+  margin: 5px;
 }
 
 @keyframes animatename{

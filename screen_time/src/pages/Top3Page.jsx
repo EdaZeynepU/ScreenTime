@@ -14,6 +14,7 @@ function Top3Page() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [top3CurrentList, setTop3CurrentList] = useState({})
   const importedImages = {};
+  
   const params=useParams();
 
   useEffect(() => {
@@ -39,7 +40,6 @@ function Top3Page() {
     setcurrentIndex((prev) => (3+prev + value) % 3);
   };
 
-  console.log(currentIndex);
   return (
     <div
       style={{

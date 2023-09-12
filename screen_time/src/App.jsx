@@ -9,6 +9,7 @@ import Top3Page from "./pages/Top3Page";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Populer from "./pages/Populer";
+import WatchListPage from "./pages/WatchListPage";
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/top-three" element={<Top3SelectionPage/>} />
         <Route path="/top-three/:category" element={<Top3Page category/>} />
         <Route path="/populer" element={<Populer/>} />
+        <Route path="/watch-list" element={<WatchListPage/>} />
       </Routes>
       </div>
   );
